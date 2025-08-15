@@ -26,6 +26,7 @@ import { useTabState } from "@/hooks/useTabState";
 import { AnalyticsConsentBanner } from "@/components/AnalyticsConsent";
 import { useAppLifecycle, useTrackEvent } from "@/hooks";
 import { StartupIntro } from "@/components/StartupIntro";
+import { WindowPersistenceService } from "@/services/windowPersistence";
 
 type View = 
   | "welcome" 
@@ -519,6 +520,29 @@ function App() {
     })();
     return () => {
       if (timer) window.clearTimeout(timer);
+    };
+  }, []);
+
+  // Initialize window persistence
+  useEffect(() => {
+    let cleanupResize: (() => void) | undefined;
+
+    (async () => {
+      try {
+        // Restore window size on app startup
+        await WindowPersistenceService.restoreWindowSize();
+
+        // Initialize resize listener
+        cleanupResize = WindowPersistenceService.initializeResizeListener();
+      } catch (error) {
+        console.error('Failed to initialize window persistence:', error);
+      }
+    })();
+
+    return () => {
+      if (cleanupResize) {
+        cleanupResize();
+      }
     };
   }, []);
 

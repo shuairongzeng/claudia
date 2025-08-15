@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { Download, Upload, FileText, Loader2, Info, Network, Settings2 } from "lucide-react";
+import { Download, Upload, FileText, Loader2, Info, Network, Settings2, Copy, Check, AlertCircle, Wand2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SelectComponent } from "@/components/ui/select";
 import { api } from "@/lib/api";
@@ -27,6 +30,13 @@ export const MCPImportExport: React.FC<MCPImportExportProps> = ({
   const [importingDesktop, setImportingDesktop] = useState(false);
   const [importingJson, setImportingJson] = useState(false);
   const [importScope, setImportScope] = useState("local");
+
+  // New states for text import
+  const [jsonText, setJsonText] = useState("");
+  const [serverName, setServerName] = useState("");
+  const [jsonValid, setJsonValid] = useState<boolean | null>(null);
+  const [detectedFormat, setDetectedFormat] = useState<"single" | "multiple" | null>(null);
+  const [importTab, setImportTab] = useState("text");
 
   /**
    * Imports servers from Claude Desktop
@@ -160,6 +170,152 @@ export const MCPImportExport: React.FC<MCPImportExportProps> = ({
     }
   };
 
+  /**
+   * Validates and analyzes JSON text
+   */
+  const validateJsonText = (text: string) => {
+    if (!text.trim()) {
+      setJsonValid(null);
+      setDetectedFormat(null);
+      return;
+    }
+
+    try {
+      const jsonData = JSON.parse(text);
+      setJsonValid(true);
+
+      // Detect format
+      if (jsonData.mcpServers) {
+        setDetectedFormat("multiple");
+      } else if (jsonData.type && jsonData.command) {
+        setDetectedFormat("single");
+      } else {
+        setJsonValid(false);
+        setDetectedFormat(null);
+      }
+    } catch (e) {
+      setJsonValid(false);
+      setDetectedFormat(null);
+    }
+  };
+
+  /**
+   * Handles JSON text change
+   */
+  const handleJsonTextChange = (text: string) => {
+    setJsonText(text);
+    validateJsonText(text);
+  };
+
+  /**
+   * Handles JSON text import
+   */
+  const handleJsonTextImport = async () => {
+    if (!jsonText.trim() || !jsonValid) {
+      onError("Please enter valid JSON configuration");
+      return;
+    }
+
+    try {
+      setImportingJson(true);
+      const jsonData = JSON.parse(jsonText);
+
+      if (detectedFormat === "multiple") {
+        // Multiple servers format
+        let imported = 0;
+        let failed = 0;
+
+        for (const [name, config] of Object.entries(jsonData.mcpServers)) {
+          try {
+            const serverConfig = {
+              type: "stdio",
+              command: (config as any).command,
+              args: (config as any).args || [],
+              env: (config as any).env || {}
+            };
+
+            const result = await api.mcpAddJson(name, JSON.stringify(serverConfig), importScope);
+            if (result.success) {
+              imported++;
+            } else {
+              failed++;
+            }
+          } catch (e) {
+            failed++;
+          }
+        }
+
+        onImportCompleted(imported, failed);
+      } else if (detectedFormat === "single") {
+        // Single server format
+        const name = serverName.trim() || "imported-server";
+        const result = await api.mcpAddJson(name, jsonText, importScope);
+
+        if (result.success) {
+          onImportCompleted(1, 0);
+          // Clear form
+          setJsonText("");
+          setServerName("");
+          setJsonValid(null);
+          setDetectedFormat(null);
+        } else {
+          onError(result.message);
+        }
+      }
+    } catch (error) {
+      console.error("Failed to import JSON text:", error);
+      onError("Failed to import JSON configuration");
+    } finally {
+      setImportingJson(false);
+    }
+  };
+
+  /**
+   * Format JSON text
+   */
+  const formatJsonText = () => {
+    if (!jsonText.trim()) return;
+
+    try {
+      const parsed = JSON.parse(jsonText);
+      const formatted = JSON.stringify(parsed, null, 2);
+      setJsonText(formatted);
+    } catch (e) {
+      // Ignore formatting errors
+    }
+  };
+
+  /**
+   * Insert example JSON
+   */
+  const insertExample = (type: "single" | "multiple") => {
+    const examples = {
+      single: `{
+  "type": "stdio",
+  "command": "/path/to/server",
+  "args": ["--arg1", "value"],
+  "env": { "KEY": "value" }
+}`,
+      multiple: `{
+  "mcpServers": {
+    "server1": {
+      "command": "/path/to/server1",
+      "args": [],
+      "env": {}
+    },
+    "server2": {
+      "command": "/path/to/server2",
+      "args": ["--port", "8080"],
+      "env": { "API_KEY": "..." }
+    }
+  }
+}`
+    };
+
+    setJsonText(examples[type]);
+    validateJsonText(examples[type]);
+  };
+
   return (
     <div className="p-6 space-y-6">
       <div>
@@ -189,6 +345,161 @@ export const MCPImportExport: React.FC<MCPImportExportProps> = ({
             <p className="text-xs text-muted-foreground">
               Choose where to save imported servers from JSON files
             </p>
+          </div>
+        </Card>
+
+        {/* Import from JSON */}
+        <Card className="p-4 hover:bg-accent/5 transition-colors">
+          <div className="space-y-4">
+            <div className="flex items-start gap-3">
+              <div className="p-2.5 bg-purple-500/10 rounded-lg">
+                <FileText className="h-5 w-5 text-purple-500" />
+              </div>
+              <div className="flex-1">
+                <h4 className="text-sm font-medium">Import from JSON</h4>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Import server configuration from a JSON file or paste JSON content
+                </p>
+              </div>
+            </div>
+
+            <Tabs value={importTab} onValueChange={setImportTab} className="w-full">
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="text">Paste JSON</TabsTrigger>
+                <TabsTrigger value="file">From File</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="text" className="space-y-3 mt-4">
+                <div className="space-y-3">
+                  {/* JSON Text Area */}
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="json-text" className="text-sm font-medium">
+                        JSON Configuration
+                      </Label>
+                      <div className="flex items-center gap-2">
+                        {jsonValid === true && (
+                          <div className="flex items-center gap-1 text-green-600 text-xs">
+                            <Check className="h-3 w-3" />
+                            Valid {detectedFormat === "single" ? "single server" : "multiple servers"}
+                          </div>
+                        )}
+                        {jsonValid === false && (
+                          <div className="flex items-center gap-1 text-red-600 text-xs">
+                            <AlertCircle className="h-3 w-3" />
+                            Invalid JSON
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <Textarea
+                      id="json-text"
+                      placeholder="Paste your JSON configuration here..."
+                      value={jsonText}
+                      onChange={(e) => handleJsonTextChange(e.target.value)}
+                      className="min-h-[120px] font-mono text-sm"
+                      disabled={importingJson}
+                    />
+                  </div>
+
+                  {/* Server Name Input (for single server format) */}
+                  {detectedFormat === "single" && (
+                    <div className="space-y-2">
+                      <Label htmlFor="server-name" className="text-sm font-medium">
+                        Server Name
+                      </Label>
+                      <Input
+                        id="server-name"
+                        placeholder="Enter server name (e.g., my-server)"
+                        value={serverName}
+                        onChange={(e) => setServerName(e.target.value)}
+                        disabled={importingJson}
+                      />
+                    </div>
+                  )}
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-wrap gap-2">
+                    <Button
+                      onClick={() => insertExample("single")}
+                      variant="outline"
+                      size="sm"
+                      className="gap-1"
+                    >
+                      <Copy className="h-3 w-3" />
+                      Single Server Example
+                    </Button>
+                    <Button
+                      onClick={() => insertExample("multiple")}
+                      variant="outline"
+                      size="sm"
+                      className="gap-1"
+                    >
+                      <Copy className="h-3 w-3" />
+                      Multiple Servers Example
+                    </Button>
+                    <Button
+                      onClick={formatJsonText}
+                      variant="outline"
+                      size="sm"
+                      className="gap-1"
+                      disabled={!jsonText.trim()}
+                    >
+                      <Wand2 className="h-3 w-3" />
+                      Format
+                    </Button>
+                  </div>
+
+                  {/* Import Button */}
+                  <Button
+                    onClick={handleJsonTextImport}
+                    disabled={importingJson || !jsonValid || (detectedFormat === "single" && !serverName.trim())}
+                    className="w-full gap-2"
+                  >
+                    {importingJson ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        Importing...
+                      </>
+                    ) : (
+                      <>
+                        <Upload className="h-4 w-4" />
+                        Import Configuration
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="file" className="space-y-3 mt-4">
+                <input
+                  type="file"
+                  accept=".json"
+                  onChange={handleJsonFileSelect}
+                  disabled={importingJson}
+                  className="hidden"
+                  id="json-file-input"
+                />
+                <Button
+                  onClick={() => document.getElementById("json-file-input")?.click()}
+                  disabled={importingJson}
+                  className="w-full gap-2"
+                  variant="outline"
+                >
+                  {importingJson ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Importing...
+                    </>
+                  ) : (
+                    <>
+                      <FileText className="h-4 w-4" />
+                      Choose JSON File
+                    </>
+                  )}
+                </Button>
+              </TabsContent>
+            </Tabs>
           </div>
         </Card>
 
@@ -223,51 +534,6 @@ export const MCPImportExport: React.FC<MCPImportExportProps> = ({
                 </>
               )}
             </Button>
-          </div>
-        </Card>
-
-        {/* Import from JSON */}
-        <Card className="p-4 hover:bg-accent/5 transition-colors">
-          <div className="space-y-3">
-            <div className="flex items-start gap-3">
-              <div className="p-2.5 bg-purple-500/10 rounded-lg">
-                <FileText className="h-5 w-5 text-purple-500" />
-              </div>
-              <div className="flex-1">
-                <h4 className="text-sm font-medium">Import from JSON</h4>
-                <p className="text-xs text-muted-foreground mt-1">
-                  Import server configuration from a JSON file
-                </p>
-              </div>
-            </div>
-            <div>
-              <input
-                type="file"
-                accept=".json"
-                onChange={handleJsonFileSelect}
-                disabled={importingJson}
-                className="hidden"
-                id="json-file-input"
-              />
-              <Button
-                onClick={() => document.getElementById("json-file-input")?.click()}
-                disabled={importingJson}
-                className="w-full gap-2"
-                variant="outline"
-              >
-                {importingJson ? (
-                  <>
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                    Importing...
-                  </>
-                ) : (
-                  <>
-                    <FileText className="h-4 w-4" />
-                    Choose JSON File
-                  </>
-                )}
-              </Button>
-            </div>
           </div>
         </Card>
 

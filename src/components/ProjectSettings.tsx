@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { StickyTabs, StickyTabsList, StickyTabsContent, TabsTrigger } from '@/components/ui/sticky-tabs';
 import { cn } from '@/lib/utils';
 import { Toast, ToastContainer } from '@/components/ui/toast';
 import type { Project } from '@/lib/api';
@@ -104,25 +104,24 @@ export const ProjectSettings: React.FC<ProjectSettingsProps> = ({
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto">
-        <div className="p-6">
-          <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="mb-6">
-              <TabsTrigger value="commands" className="gap-2">
-                <Command className="h-4 w-4" />
-                Slash Commands
-              </TabsTrigger>
-              <TabsTrigger value="project" className="gap-2">
-                <GitBranch className="h-4 w-4" />
-                Project Hooks
-              </TabsTrigger>
-              <TabsTrigger value="local" className="gap-2">
-                <Shield className="h-4 w-4" />
-                Local Hooks
-              </TabsTrigger>
-            </TabsList>
+      <div className="flex-1 flex flex-col">
+        <StickyTabs value={activeTab} onValueChange={setActiveTab} className="h-full">
+          <StickyTabsList className="mx-6 mt-6 mb-0">
+            <TabsTrigger value="commands" className="gap-2">
+              <Command className="h-4 w-4" />
+              Slash Commands
+            </TabsTrigger>
+            <TabsTrigger value="project" className="gap-2">
+              <GitBranch className="h-4 w-4" />
+              Project Hooks
+            </TabsTrigger>
+            <TabsTrigger value="local" className="gap-2">
+              <Shield className="h-4 w-4" />
+              Local Hooks
+            </TabsTrigger>
+          </StickyTabsList>
 
-            <TabsContent value="commands" className="space-y-6">
+            <StickyTabsContent value="commands" className="space-y-6">
               <Card className="p-6">
                 <div className="space-y-4">
                   <div>
@@ -140,9 +139,9 @@ export const ProjectSettings: React.FC<ProjectSettingsProps> = ({
                   />
                 </div>
               </Card>
-            </TabsContent>
+            </StickyTabsContent>
 
-            <TabsContent value="project" className="space-y-6">
+            <StickyTabsContent value="project" className="space-y-6">
               <Card className="p-6">
                 <div className="space-y-4">
                   <div>
@@ -160,9 +159,9 @@ export const ProjectSettings: React.FC<ProjectSettingsProps> = ({
                   />
                 </div>
               </Card>
-            </TabsContent>
+            </StickyTabsContent>
 
-            <TabsContent value="local" className="space-y-6">
+            <StickyTabsContent value="local" className="space-y-6">
               <Card className="p-6">
                 <div className="space-y-4">
                   <div>
@@ -198,9 +197,8 @@ export const ProjectSettings: React.FC<ProjectSettingsProps> = ({
                   />
                 </div>
               </Card>
-            </TabsContent>
-          </Tabs>
-        </div>
+            </StickyTabsContent>
+        </StickyTabs>
       </div>
 
       {/* Toast Container */}

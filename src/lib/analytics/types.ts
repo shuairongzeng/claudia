@@ -15,6 +15,7 @@ export interface AnalyticsEvent {
 export interface AnalyticsSettings {
   enabled: boolean;
   hasConsented: boolean;
+  hasSeenBanner?: boolean; // Track if user has seen the consent banner
   consentDate?: string;
   userId?: string;
   sessionId?: string;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { StickyTabs, StickyTabsList, StickyTabsContent, TabsTrigger } from "@/components/ui/sticky-tabs";
 import { Badge } from "@/components/ui/badge";
 import { api, type UsageStats, type ProjectUsage } from "@/lib/api";
 import { 
@@ -362,20 +362,20 @@ export const UsageDashboard: React.FC<UsageDashboardProps> = ({ }) => {
               {summaryCards}
 
               {/* Tabs for different views */}
-              <Tabs value={activeTab} onValueChange={(value) => {
+              <StickyTabs value={activeTab} onValueChange={(value) => {
                 setActiveTab(value);
                 setHasLoadedTabs(prev => new Set([...prev, value]));
               }} className="w-full">
-                <TabsList className="grid grid-cols-5 w-full mb-6 h-auto p-1">
+                <StickyTabsList className="grid grid-cols-5 w-full mb-0 h-auto p-1">
                   <TabsTrigger value="overview" className="py-2.5 px-3">Overview</TabsTrigger>
                   <TabsTrigger value="models" className="py-2.5 px-3">By Model</TabsTrigger>
                   <TabsTrigger value="projects" className="py-2.5 px-3">By Project</TabsTrigger>
                   <TabsTrigger value="sessions" className="py-2.5 px-3">By Session</TabsTrigger>
                   <TabsTrigger value="timeline" className="py-2.5 px-3">Timeline</TabsTrigger>
-                </TabsList>
+                </StickyTabsList>
 
                 {/* Overview Tab */}
-                <TabsContent value="overview" className="space-y-6 mt-6">
+                <StickyTabsContent value="overview" className="space-y-6">
                   <Card className="p-6">
                     <h3 className="text-label mb-4">Token Breakdown</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -414,10 +414,10 @@ export const UsageDashboard: React.FC<UsageDashboardProps> = ({ }) => {
                       </div>
                     </Card>
                   </div>
-                </TabsContent>
+                </StickyTabsContent>
 
                 {/* Models Tab - Lazy render and cache */}
-                <TabsContent value="models" className="space-y-6 mt-6">
+                <StickyTabsContent value="models" className="space-y-6">
                   {hasLoadedTabs.has("models") && stats && (
                     <div style={{ display: activeTab === "models" ? "block" : "none" }}>
                       <Card className="p-6">
@@ -465,10 +465,10 @@ export const UsageDashboard: React.FC<UsageDashboardProps> = ({ }) => {
                       </Card>
                     </div>
                   )}
-                </TabsContent>
+                </StickyTabsContent>
 
                 {/* Projects Tab - Lazy render and cache */}
-                <TabsContent value="projects" className="space-y-6 mt-6">
+                <StickyTabsContent value="projects" className="space-y-6">
                   {hasLoadedTabs.has("projects") && stats && (
                     <div style={{ display: activeTab === "projects" ? "block" : "none" }}>
                       <Card className="p-6">
@@ -547,10 +547,10 @@ export const UsageDashboard: React.FC<UsageDashboardProps> = ({ }) => {
                       </Card>
                     </div>
                   )}
-                </TabsContent>
+                </StickyTabsContent>
 
                 {/* Sessions Tab - Lazy render and cache */}
-                <TabsContent value="sessions" className="space-y-6 mt-6">
+                <StickyTabsContent value="sessions" className="space-y-6">
                   {hasLoadedTabs.has("sessions") && (
                     <div style={{ display: activeTab === "sessions" ? "block" : "none" }}>
                       <Card className="p-6">
@@ -633,10 +633,10 @@ export const UsageDashboard: React.FC<UsageDashboardProps> = ({ }) => {
                       </Card>
                     </div>
                   )}
-                </TabsContent>
+                </StickyTabsContent>
 
                 {/* Timeline Tab - Lazy render and cache */}
-                <TabsContent value="timeline" className="space-y-6 mt-6">
+                <StickyTabsContent value="timeline" className="space-y-6">
                   {hasLoadedTabs.has("timeline") && stats && (
                     <div style={{ display: activeTab === "timeline" ? "block" : "none" }}>
                       <Card className="p-6">
@@ -713,8 +713,8 @@ export const UsageDashboard: React.FC<UsageDashboardProps> = ({ }) => {
                       </Card>
                     </div>
                   )}
-                </TabsContent>
-              </Tabs>
+                </StickyTabsContent>
+              </StickyTabs>
             </div>
           ) : null}
         </div>

@@ -267,9 +267,18 @@ class AnalyticsService {
   hasConsented(): boolean {
     return this.consentManager.hasConsented();
   }
-  
+
+  hasSeenBanner(): boolean {
+    return this.consentManager.hasSeenBanner();
+  }
+
   getSettings(): AnalyticsSettings | null {
     return this.consentManager.getSettings();
+  }
+
+  // Debug method to help troubleshoot banner issues
+  debugBannerState(): void {
+    this.consentManager.debugBannerState();
   }
 }
 

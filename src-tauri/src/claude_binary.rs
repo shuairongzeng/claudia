@@ -74,7 +74,14 @@ pub fn find_claude_binary(app_handle: &tauri::AppHandle) -> Result<String, Strin
 
     if installations.is_empty() {
         error!("Could not find claude binary in any location");
-        return Err("Claude Code not found. Please ensure it's installed in one of these locations: PATH, /usr/local/bin, /opt/homebrew/bin, ~/.nvm/versions/node/*/bin, ~/.claude/local, ~/.local/bin".to_string());
+
+        #[cfg(target_os = "windows")]
+        let error_msg = "Claude Code not found. Please ensure it's installed in one of these locations: PATH, %APPDATA%\\npm\\, %USERPROFILE%\\AppData\\Roaming\\npm\\, %PROGRAMFILES%\\Claude\\, %LOCALAPPDATA%\\Programs\\Claude\\";
+
+        #[cfg(not(target_os = "windows"))]
+        let error_msg = "Claude Code not found. Please ensure it's installed in one of these locations: PATH, /usr/local/bin, /opt/homebrew/bin, ~/.nvm/versions/node/*/bin, ~/.claude/local, ~/.local/bin";
+
+        return Err(error_msg.to_string());
     }
 
     // Log all found installations
@@ -126,19 +133,31 @@ pub fn discover_claude_installations() -> Vec<ClaudeInstallation> {
 /// Returns a preference score for installation sources (lower is better)
 fn source_preference(installation: &ClaudeInstallation) -> u8 {
     match installation.source.as_str() {
-        "which" => 1,
-        "homebrew" => 2,
-        "system" => 3,
-        source if source.starts_with("nvm") => 4,
-        "local-bin" => 5,
-        "claude-local" => 6,
-        "npm-global" => 7,
-        "yarn" | "yarn-global" => 8,
-        "bun" => 9,
-        "node-modules" => 10,
-        "home-bin" => 11,
-        "PATH" => 12,
-        _ => 13,
+        // NPM installations (highest priority)
+        "npm-prefix-cmd" => 1,
+        "npm-prefix-ps1" => 2,
+        "npm-global" => 3,
+        "npm-appdata" => 4,
+        "npm-roaming" => 5,
+        // System commands
+        "which" | "where" => 6,
+        "powershell" => 7,
+        // Package managers
+        "homebrew" => 8,
+        "system" => 9,
+        source if source.starts_with("nvm") => 10,
+        // User-specific paths
+        "local-bin" => 11,
+        "claude-local" => 12,
+        "npm-local" => 13,
+        "npm-global-user" => 14,
+        "yarn" | "yarn-global" => 15,
+        "bun" => 16,
+        "node-modules" => 17,
+        "home-bin" => 18,
+        // Fallback
+        "PATH" => 19,
+        _ => 20,
     }
 }
 
@@ -164,7 +183,8 @@ fn discover_system_installations() -> Vec<ClaudeInstallation> {
     installations
 }
 
-/// Try using the 'which' command to find Claude
+/// Try using the 'which' command to find Claude (Unix/Linux)
+#[cfg(not(target_os = "windows"))]
 fn try_which_command() -> Option<ClaudeInstallation> {
     debug!("Trying 'which claude' to find binary...");
 
@@ -208,7 +228,90 @@ fn try_which_command() -> Option<ClaudeInstallation> {
     }
 }
 
-/// Find Claude installations in NVM directories
+/// Try using PowerShell Get-Command to find Claude (Windows)
+#[cfg(target_os = "windows")]
+fn try_which_command() -> Option<ClaudeInstallation> {
+    debug!("Trying PowerShell Get-Command to find claude binary...");
+
+    // First try using 'where' command
+    if let Some(installation) = try_where_command() {
+        return Some(installation);
+    }
+
+    // Fallback to PowerShell Get-Command
+    match Command::new("powershell")
+        .args(["-Command", "(Get-Command claude -ErrorAction SilentlyContinue).Source"])
+        .output()
+    {
+        Ok(output) if output.status.success() => {
+            let output_str = String::from_utf8_lossy(&output.stdout).trim().to_string();
+
+            if output_str.is_empty() {
+                return None;
+            }
+
+            debug!("PowerShell Get-Command found claude at: {}", output_str);
+
+            // Verify the path exists
+            if !PathBuf::from(&output_str).exists() {
+                warn!("Path from PowerShell Get-Command does not exist: {}", output_str);
+                return None;
+            }
+
+            // Get version
+            let version = get_claude_version(&output_str).ok().flatten();
+
+            Some(ClaudeInstallation {
+                path: output_str,
+                version,
+                source: "powershell".to_string(),
+                installation_type: InstallationType::System,
+            })
+        }
+        _ => None,
+    }
+}
+
+/// Try using the 'where' command to find Claude (Windows)
+#[cfg(target_os = "windows")]
+fn try_where_command() -> Option<ClaudeInstallation> {
+    debug!("Trying 'where claude' to find binary...");
+
+    match Command::new("where").arg("claude").output() {
+        Ok(output) if output.status.success() => {
+            let output_str = String::from_utf8_lossy(&output.stdout).trim().to_string();
+
+            if output_str.is_empty() {
+                return None;
+            }
+
+            // 'where' can return multiple paths, take the first one
+            let path = output_str.lines().next()?.trim().to_string();
+
+            debug!("'where' found claude at: {}", path);
+
+            // Verify the path exists
+            if !PathBuf::from(&path).exists() {
+                warn!("Path from 'where' does not exist: {}", path);
+                return None;
+            }
+
+            // Get version
+            let version = get_claude_version(&path).ok().flatten();
+
+            Some(ClaudeInstallation {
+                path,
+                version,
+                source: "where".to_string(),
+                installation_type: InstallationType::System,
+            })
+        }
+        _ => None,
+    }
+}
+
+/// Find Claude installations in NVM directories (Unix/Linux)
+#[cfg(not(target_os = "windows"))]
 fn find_nvm_installations() -> Vec<ClaudeInstallation> {
     let mut installations = Vec::new();
 
@@ -249,7 +352,62 @@ fn find_nvm_installations() -> Vec<ClaudeInstallation> {
     installations
 }
 
-/// Check standard installation paths
+/// Find Claude installations in NVM directories (Windows)
+#[cfg(target_os = "windows")]
+fn find_nvm_installations() -> Vec<ClaudeInstallation> {
+    let mut installations = Vec::new();
+
+    // Check Windows NVM paths
+    if let Ok(userprofile) = std::env::var("USERPROFILE") {
+        // NVM for Windows typically installs to %USERPROFILE%\AppData\Roaming\nvm
+        let nvm_dir = PathBuf::from(&userprofile)
+            .join("AppData")
+            .join("Roaming")
+            .join("nvm");
+
+        debug!("Checking Windows NVM directory: {:?}", nvm_dir);
+
+        if let Ok(entries) = std::fs::read_dir(&nvm_dir) {
+            for entry in entries.flatten() {
+                if entry.file_type().map(|t| t.is_dir()).unwrap_or(false) {
+                    let entry_name = entry.file_name().to_string_lossy().to_string();
+
+                    // Skip non-version directories
+                    if !entry_name.starts_with('v') && !entry_name.chars().next().unwrap_or('a').is_numeric() {
+                        continue;
+                    }
+
+                    // Check for claude.ps1, claude.cmd, or claude.exe
+                    for ext in &["claude.ps1", "claude.cmd", "claude.exe", "claude"] {
+                        let claude_path = entry.path().join(ext);
+
+                        if claude_path.exists() && claude_path.is_file() {
+                            let path_str = claude_path.to_string_lossy().to_string();
+
+                            debug!("Found Claude in Windows NVM node {}: {}", entry_name, path_str);
+
+                            // Get Claude version
+                            let version = get_claude_version(&path_str).ok().flatten();
+
+                            installations.push(ClaudeInstallation {
+                                path: path_str,
+                                version,
+                                source: format!("nvm-windows ({})", entry_name),
+                                installation_type: InstallationType::System,
+                            });
+                            break; // Only add one installation per node version
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    installations
+}
+
+/// Check standard installation paths (Unix/Linux)
+#[cfg(not(target_os = "windows"))]
 fn find_standard_installations() -> Vec<ClaudeInstallation> {
     let mut installations = Vec::new();
 
@@ -324,6 +482,167 @@ fn find_standard_installations() -> Vec<ClaudeInstallation> {
                 source: "PATH".to_string(),
                 installation_type: InstallationType::System,
             });
+        }
+    }
+
+    installations
+}
+
+/// Check standard installation paths (Windows)
+#[cfg(target_os = "windows")]
+fn find_standard_installations() -> Vec<ClaudeInstallation> {
+    let mut installations = Vec::new();
+
+    // First, try to get NPM prefix path using npm config
+    installations.extend(find_npm_installations());
+
+    // Get Windows environment variables as fallback
+    let userprofile = std::env::var("USERPROFILE").unwrap_or_default();
+    let appdata = std::env::var("APPDATA").unwrap_or_default();
+    let localappdata = std::env::var("LOCALAPPDATA").unwrap_or_default();
+    let programfiles = std::env::var("PROGRAMFILES").unwrap_or_default();
+    let programfiles_x86 = std::env::var("PROGRAMFILES(X86)").unwrap_or_default();
+
+    // Fallback paths if npm config doesn't work
+    let mut paths_to_check: Vec<(String, String)> = vec![];
+
+    // NPM global installations (fallback)
+    if !appdata.is_empty() {
+        paths_to_check.extend(vec![
+            (format!("{}\\npm\\claude.ps1", appdata), "npm-appdata".to_string()),
+            (format!("{}\\npm\\claude.cmd", appdata), "npm-appdata".to_string()),
+        ]);
+    }
+
+    // User-specific paths
+    if !userprofile.is_empty() {
+        paths_to_check.extend(vec![
+            (format!("{}\\AppData\\Roaming\\npm\\claude.ps1", userprofile), "npm-roaming".to_string()),
+            (format!("{}\\AppData\\Roaming\\npm\\claude.cmd", userprofile), "npm-roaming".to_string()),
+            (format!("{}\\AppData\\Local\\npm\\claude.ps1", userprofile), "npm-local".to_string()),
+            (format!("{}\\AppData\\Local\\npm\\claude.cmd", userprofile), "npm-local".to_string()),
+            (format!("{}\\.npm-global\\claude.ps1", userprofile), "npm-global-user".to_string()),
+            (format!("{}\\.npm-global\\claude.cmd", userprofile), "npm-global-user".to_string()),
+            (format!("{}\\.yarn\\bin\\claude.ps1", userprofile), "yarn".to_string()),
+            (format!("{}\\.yarn\\bin\\claude.cmd", userprofile), "yarn".to_string()),
+            (format!("{}\\.bun\\bin\\claude.exe", userprofile), "bun".to_string()),
+        ]);
+    }
+
+    // Program Files installations
+    if !programfiles.is_empty() {
+        paths_to_check.extend(vec![
+            (format!("{}\\Claude\\claude.exe", programfiles), "system".to_string()),
+            (format!("{}\\Claude Code\\claude.exe", programfiles), "system".to_string()),
+        ]);
+    }
+
+    if !programfiles_x86.is_empty() {
+        paths_to_check.extend(vec![
+            (format!("{}\\Claude\\claude.exe", programfiles_x86), "system-x86".to_string()),
+            (format!("{}\\Claude Code\\claude.exe", programfiles_x86), "system-x86".to_string()),
+        ]);
+    }
+
+    // Local AppData installations
+    if !localappdata.is_empty() {
+        paths_to_check.extend(vec![
+            (format!("{}\\Programs\\Claude\\claude.exe", localappdata), "local-programs".to_string()),
+            (format!("{}\\Programs\\Claude Code\\claude.exe", localappdata), "local-programs".to_string()),
+        ]);
+    }
+
+    // Check each fallback path
+    for (path, source) in paths_to_check {
+        let path_buf = PathBuf::from(&path);
+        if path_buf.exists() && path_buf.is_file() {
+            debug!("Found claude at Windows fallback path: {} ({})", path, source);
+
+            // Get version
+            let version = get_claude_version(&path).ok().flatten();
+
+            installations.push(ClaudeInstallation {
+                path,
+                version,
+                source,
+                installation_type: InstallationType::System,
+            });
+        }
+    }
+
+    // Also check if claude is available in PATH (without full path)
+    if let Ok(output) = Command::new("claude").arg("--version").output() {
+        if output.status.success() {
+            debug!("claude is available in PATH");
+            let version = extract_version_from_output(&output.stdout);
+
+            installations.push(ClaudeInstallation {
+                path: "claude".to_string(),
+                version,
+                source: "PATH".to_string(),
+                installation_type: InstallationType::System,
+            });
+        }
+    }
+
+    installations
+}
+
+/// Find NPM installations using npm config get prefix (Windows)
+#[cfg(target_os = "windows")]
+fn find_npm_installations() -> Vec<ClaudeInstallation> {
+    let mut installations = Vec::new();
+
+    debug!("Trying to get NPM prefix path...");
+
+    // Try to get npm prefix path
+    match Command::new("npm").args(["config", "get", "prefix"]).output() {
+        Ok(output) if output.status.success() => {
+            let npm_prefix = String::from_utf8_lossy(&output.stdout).trim().to_string();
+
+            if !npm_prefix.is_empty() && npm_prefix != "undefined" {
+                debug!("Found NPM prefix: {}", npm_prefix);
+
+                // Check for claude.cmd and claude.ps1 in the npm prefix directory
+                let claude_cmd_path = format!("{}\\claude.cmd", npm_prefix);
+                let claude_ps1_path = format!("{}\\claude.ps1", npm_prefix);
+
+                // Check claude.cmd first (more reliable)
+                if PathBuf::from(&claude_cmd_path).exists() {
+                    debug!("Found claude.cmd at NPM prefix: {}", claude_cmd_path);
+
+                    let version = get_claude_version(&claude_cmd_path).ok().flatten();
+
+                    installations.push(ClaudeInstallation {
+                        path: claude_cmd_path,
+                        version: version.clone(),
+                        source: "npm-prefix-cmd".to_string(),
+                        installation_type: InstallationType::System,
+                    });
+                }
+
+                // Check claude.ps1 as alternative
+                if PathBuf::from(&claude_ps1_path).exists() {
+                    debug!("Found claude.ps1 at NPM prefix: {}", claude_ps1_path);
+
+                    let version = get_claude_version(&claude_ps1_path).ok().flatten();
+
+                    installations.push(ClaudeInstallation {
+                        path: claude_ps1_path,
+                        version,
+                        source: "npm-prefix-ps1".to_string(),
+                        installation_type: InstallationType::System,
+                    });
+                }
+            } else {
+                debug!("NPM prefix is empty or undefined");
+            }
+        }
+        Ok(_) => {
+            debug!("NPM config command succeeded but returned non-success status");
+        }
+        Err(e) => {
+            debug!("Failed to get NPM prefix: {}", e);
         }
     }
 
@@ -457,24 +776,40 @@ pub fn create_command_with_env(program: &str) -> Command {
     // Inherit essential environment variables from parent process
     for (key, value) in std::env::vars() {
         // Pass through PATH and other essential environment variables
-        if key == "PATH"
-            || key == "HOME"
-            || key == "USER"
-            || key == "SHELL"
-            || key == "LANG"
-            || key == "LC_ALL"
-            || key.starts_with("LC_")
+        let should_inherit = key == "PATH"
             || key == "NODE_PATH"
             || key == "NVM_DIR"
             || key == "NVM_BIN"
-            || key == "HOMEBREW_PREFIX"
-            || key == "HOMEBREW_CELLAR"
             // Add proxy environment variables (only uppercase)
             || key == "HTTP_PROXY"
             || key == "HTTPS_PROXY"
             || key == "NO_PROXY"
             || key == "ALL_PROXY"
-        {
+            // Unix/Linux specific variables
+            || (cfg!(not(target_os = "windows")) && (
+                key == "HOME"
+                || key == "USER"
+                || key == "SHELL"
+                || key == "LANG"
+                || key == "LC_ALL"
+                || key.starts_with("LC_")
+                || key == "HOMEBREW_PREFIX"
+                || key == "HOMEBREW_CELLAR"
+            ))
+            // Windows specific variables
+            || (cfg!(target_os = "windows") && (
+                key == "USERPROFILE"
+                || key == "USERNAME"
+                || key == "APPDATA"
+                || key == "LOCALAPPDATA"
+                || key == "PROGRAMFILES"
+                || key == "PROGRAMFILES(X86)"
+                || key == "COMSPEC"
+                || key == "SYSTEMROOT"
+                || key == "WINDIR"
+            ));
+
+        if should_inherit {
             debug!("Inheriting env var: {}={}", key, value);
             cmd.env(&key, &value);
         }
@@ -490,6 +825,7 @@ pub fn create_command_with_env(program: &str) -> Command {
     }
 
     // Add NVM support if the program is in an NVM directory
+    #[cfg(not(target_os = "windows"))]
     if program.contains("/.nvm/versions/node/") {
         if let Some(node_bin_dir) = std::path::Path::new(program).parent() {
             // Ensure the Node.js bin directory is in PATH
@@ -502,8 +838,24 @@ pub fn create_command_with_env(program: &str) -> Command {
             }
         }
     }
-    
-    // Add Homebrew support if the program is in a Homebrew directory
+
+    // Add Windows NVM support
+    #[cfg(target_os = "windows")]
+    if program.contains("\\AppData\\Roaming\\nvm\\") {
+        if let Some(node_bin_dir) = std::path::Path::new(program).parent() {
+            // Ensure the Node.js bin directory is in PATH
+            let current_path = std::env::var("PATH").unwrap_or_default();
+            let node_bin_str = node_bin_dir.to_string_lossy();
+            if !current_path.contains(&node_bin_str.as_ref()) {
+                let new_path = format!("{};{}", node_bin_str, current_path);
+                debug!("Adding Windows NVM bin directory to PATH: {}", node_bin_str);
+                cmd.env("PATH", new_path);
+            }
+        }
+    }
+
+    // Add Homebrew support if the program is in a Homebrew directory (Unix/Linux only)
+    #[cfg(not(target_os = "windows"))]
     if program.contains("/homebrew/") || program.contains("/opt/homebrew/") {
         if let Some(program_dir) = std::path::Path::new(program).parent() {
             // Ensure the Homebrew bin directory is in PATH

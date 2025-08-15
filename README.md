@@ -2,19 +2,25 @@
   <img src="https://github.com/user-attachments/assets/92fd93ed-e71b-4b94-b270-50684323dd00" alt="Claudia Logo" width="120" height="120">
 
   <a href="https://claudiacode.com"><h1>Claudia</h1></a>
-  
+
   <p>
     <strong>A powerful GUI app and Toolkit for Claude Code</strong>
   </p>
   <p>
     <strong>Create custom agents, manage interactive Claude Code sessions, run secure background agents, and more.</strong>
   </p>
-  
+
   <p>
     <a href="#features"><img src="https://img.shields.io/badge/Features-✨-blue?style=for-the-badge" alt="Features"></a>
     <a href="#installation"><img src="https://img.shields.io/badge/Install-🚀-green?style=for-the-badge" alt="Installation"></a>
     <a href="#usage"><img src="https://img.shields.io/badge/Usage-📖-purple?style=for-the-badge" alt="Usage"></a>
     <a href="#development"><img src="https://img.shields.io/badge/Develop-🛠️-orange?style=for-the-badge" alt="Development"></a>
+  </p>
+
+  <p>
+    <strong>🍴 This is a fork with enhanced features and improvements</strong><br>
+    <a href="https://github.com/shuairongzeng/claudia">Fork Repository</a> |
+    <a href="https://github.com/asterisk-org/claudia">Original Repository</a>
   </p>
 </div>
 
@@ -30,6 +36,26 @@ https://github.com/user-attachments/assets/bf0bdf9d-ba91-45af-9ac4-7274f57075cf
 **Claudia** is a powerful desktop application that transforms how you interact with Claude Code. Built with Tauri 2, it provides a beautiful GUI for managing your Claude Code sessions, creating custom agents, tracking usage, and much more.
 
 Think of Claudia as your command center for Claude Code - bridging the gap between the command-line tool and a visual experience that makes AI-assisted development more intuitive and productive.
+
+## 🚀 Enhanced Features in This Fork
+
+This fork includes several user experience improvements and bug fixes:
+
+### 🎯 User Experience Enhancements
+- **Sticky Tab Navigation**: All tabbed interfaces now keep tabs visible while scrolling through long content
+- **Improved JSON Import**: Added dual-mode JSON import with text paste functionality and format detection
+- **Window Size Persistence**: Application remembers and restores your preferred window size
+- **Analytics Consent Optimization**: Consent banner now only shows once for first-time users
+
+### 🔧 Technical Improvements
+- **Windows Compatibility**: Enhanced Claude Code binary detection for Windows systems
+- **Cross-Platform Path Handling**: Improved NPM installation detection across different platforms
+- **Better Error Handling**: More robust error messages and fallback mechanisms
+
+### 🎨 UI/UX Improvements
+- **Consistent Tab Experience**: Unified sticky tab behavior across all major components (MCP Manager, Settings, Usage Dashboard, etc.)
+- **Smart JSON Validation**: Real-time JSON validation with format detection for single/multiple server configurations
+- **Enhanced Import Workflow**: Streamlined MCP server import process with better user guidance
 
 ## 📋 Table of Contents
 

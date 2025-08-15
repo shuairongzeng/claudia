@@ -1,0 +1,950 @@
+Clean lockfile: 519 packages - 519 packages in 1.6ms
+[2mSkip installing[0m [1m@tauri-apps/cli-darwin-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-darwin-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-linux-arm-gnueabihf[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-linux-arm64-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-linux-arm64-musl[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-linux-riscv64-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-linux-x64-gnu[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-linux-x64-musl[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-win32-arm64-msvc[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@tauri-apps/cli-win32-ia32-msvc[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-darwin-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-darwin-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-darwin-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-darwin-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-linux-arm[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-linux-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-linux-ppc64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-linux-s390x[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-linux-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-linuxmusl-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-libvips-linuxmusl-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-linux-arm[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-linux-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-linux-s390x[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-linux-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-linuxmusl-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-linuxmusl-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-wasm32[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-win32-arm64[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@img/sharp-win32-ia32[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1mfsevents[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/aix-ppc64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/android-arm[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/android-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/android-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/darwin-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/darwin-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/freebsd-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/freebsd-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-arm[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-ia32[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-loong64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-mips64el[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-ppc64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-riscv64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-s390x[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/linux-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/netbsd-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/netbsd-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/openbsd-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/openbsd-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/sunos-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@esbuild/win32-arm64[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@esbuild/win32-ia32[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-android-arm-eabi[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-android-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-darwin-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-darwin-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-freebsd-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-freebsd-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-arm-gnueabihf[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-arm-musleabihf[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-arm64-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-arm64-musl[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-loongarch64-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-powerpc64le-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-riscv64-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-riscv64-musl[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-s390x-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-x64-gnu[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-linux-x64-musl[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-win32-arm64-msvc[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@rollup/rollup-win32-ia32-msvc[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1mfsevents[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-darwin-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-darwin-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-freebsd-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-linux-arm-gnueabihf[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-linux-arm64-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-linux-arm64-musl[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-linux-x64-gnu[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-linux-x64-musl[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1mlightningcss-win32-arm64-msvc[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-android-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-darwin-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-darwin-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-freebsd-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-linux-arm-glibc[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-linux-arm-musl[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-linux-arm64-glibc[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-linux-arm64-musl[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-linux-x64-glibc[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-linux-x64-musl[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-win32-arm64[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@parcel/watcher-win32-ia32[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-android-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-darwin-arm64[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-darwin-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-freebsd-x64[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-linux-arm-gnueabihf[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-linux-arm64-gnu[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-linux-arm64-musl[0m [2m- cpu & os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-linux-x64-gnu[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-linux-x64-musl[0m [2m- os mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-wasm32-wasi[0m [2m- cpu mismatch[0m
+[2mSkip installing[0m [1m@tailwindcss/oxide-win32-arm64-msvc[0m [2m- cpu mismatch[0m
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/property-information/-/property-information-5.6.0.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/is-alphabetical/-/is-alphabetical-2.0.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-2.0.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m3085
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bd0aeecf12-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m420691
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"e7bd40d573a2219d4e8645315f5dd489"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mThu, 04 Nov 2021 06:50:33 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=qg_wPQBNmp_CK_oB9DDd8uBobPYP8.D7sDbkDNIzyLg-1755162792506-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+    [0m[2m[[1m759.86ms[0m[2m][0m[2m Downloaded [0m[32mis-alphabetical[0m tarball
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m3457
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bd0a33945f-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m343986
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"46d55b8ad990a416a95e004d6a7ea6ab"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mWed, 27 Oct 2021 16:35:53 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=Zt4VXxXTVnAnBaivFOwsD9JX0hFgO53i3AKOzkre_co-1755162792510-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[is-alphabetical] Extract .58ffd75ee77aefa7-00000001.is-alphabetical[0m (decompressed 3.1 KB tgz file in 0ns)
+[is-alphabetical] Extracted to .58ffd75ee77aefa7-00000001.is-alphabetical (0ns)[0m
+[2m[PackageManager][0m waiting for 29 tasks
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/prismjs/-/prismjs-1.27.0.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-3.1.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m19786
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bc98d9aaac-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m416606
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"8a9b8bbc61ad36dc8a5c635031b9bded"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mTue, 13 Oct 2020 08:16:12 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=xFBWmqNJXyxKK7VxKbbvnyvMPB4yeyg4J5hUhUEBTxs-1755162792440-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 28 tasks
+    [0m[2m[[1m858.80ms[0m[2m][0m[2m Downloaded [0m[32mproperty-information[0m tarball
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/detect-libc/-/detect-libc-1.0.3.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[property-information] Extract .1dfbdf62cdedcbbf-00000002.property-information[0m (decompressed 19.79 KB tgz file in 0ns)
+[property-information] Extracted to .1dfbdf62cdedcbbf-00000002.property-information (15ms)[0m
+[2m[PackageManager][0m waiting for 28 tasks
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/refractor/-/refractor-4.9.0.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/is-alphanumerical/-/is-alphanumerical-2.0.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/yallist/-/yallist-3.1.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[2m[PackageManager][0m waiting for 27 tasks
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-4.0.0.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/is-decimal/-/is-decimal-2.0.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/hastscript/-/hastscript-7.2.0.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[2m[PackageManager][0m waiting for 27 tasks
+    [0m[2m[[1m1025.77ms[0m[2m][0m[2m Downloaded [0m[32mcharacter-reference-invalid[0m tarball
+[character-reference-invalid] Extract .5d5b97cf97bf2edb-00000003.character-reference-invalid[0m (decompressed 3.46 KB tgz file in 0ns)
+[character-reference-invalid] Extracted to .5d5b97cf97bf2edb-00000003.character-reference-invalid (15ms)[0m
+[2m[PackageManager][0m waiting for 27 tasks
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m523657
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55be987015a4-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m505737
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"26bce628a200aa65028914510bdd2fde"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mTue, 11 Mar 2025 09:10:56 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mnpm-notice[0m[2m: [0m[SECURITY] prismjs has the following vulnerability: 1 moderate. Go here for more details: https://github.com/advisories?query=prismjs - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+[0m[2m[fetch][0m < [0m[36mx-npm-meta-sec-count-moderate[0m[2m: [0m1
+[0m[2m[fetch][0m < [0m[36mx-npm-meta-sec-version[0m[2m: [0m1.27.0
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=aZEEljn34YsJwBsWgAGdRV8QzpWSmM90Rb_ZusDTPXk-1755162792768-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/parse-entities/-/parse-entities-4.0.2.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/entities/-/entities-6.0.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/is-hexadecimal/-/is-hexadecimal-2.0.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/@types/babel__core/-/babel__core-7.20.5.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/character-entities-legacy/-/character-entities-legacy-3.0.0.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/character-entities/-/character-entities-2.0.2.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/property-information/-/property-information-6.5.0.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.5.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/semver/-/semver-6.3.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m4537
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bedc86d438-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m413302
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"fa23c63799bed4c6380bcd473cdcab88"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mSat, 07 Jan 2023 15:38:38 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=UV8Iv7.VWUNXcUUJWrz_b45879xSaKORmrhEK.DcgLg-1755162792798-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 26 tasks
+    [0m[2m[[1m1169.17ms[0m[2m][0m[2m Downloaded [0m[32mhast-util-parse-selector[0m tarball
+[hast-util-parse-selector] Extract .fdffb75ebfcb93fc-00000004.hast-util-parse-selector[0m (decompressed 4.54 KB tgz file in 0ns)
+[hast-util-parse-selector] Extracted to .fdffb75ebfcb93fc-00000004.hast-util-parse-selector (16ms)[0m
+[2m[PackageManager][0m waiting for 26 tasks
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/rehype-prism-plus/-/rehype-prism-plus-2.0.0.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m6279
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bef87967df-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m776178
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"bb43dfc07947ef0682b978b989477cc1"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mSat, 26 May 2018 22:01:48 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=km9kNJRWwg6W1cjHXmWwIY9HP0UYmPPwfEO_OPIc3rs-1755162792822-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/hastscript/-/hastscript-9.0.1.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m3050
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bf38c9cefe-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m567091
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"ebd5fcb299be324342b52085e448c7d7"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mThu, 04 Nov 2021 07:00:43 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=PH0NC.hUDesi2rE2vnXzSX2N7CEo6BFhZkgTQOcXBaU-1755162792856-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 25 tasks
+    [0m[2m[[1m1232.68ms[0m[2m][0m[2m Downloaded [0m[32mis-alphanumerical[0m tarball
+[is-alphanumerical] Extract .d8fbd7efaf3ff3fb-00000005.is-alphanumerical[0m (decompressed 3.1 KB tgz file in 0ns)
+[is-alphanumerical] Extracted to .d8fbd7efaf3ff3fb-00000005.is-alphanumerical (0ns)[0m
+[2m[PackageManager][0m waiting for 25 tasks
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m5463
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bf4c329338-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m422577
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"10acfc8e7668e521027f8d5141bc69a4"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mThu, 19 Mar 2020 19:53:32 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=FAg.28yjEM_DhMKOfx1Jqqr4IFPv3HNXX.dQYWhWy_s-1755162792865-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 24 tasks
+    [0m[2m[[1m1244.04ms[0m[2m][0m[2m Downloaded [0m[32mreact-is[0m tarball
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m322422
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bf2e59169e-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m766078
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"7b21a86161fe8e04ad800f9de64d281f"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mTue, 11 Mar 2025 14:41:56 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=nXdWr1mtnIHpd6CNSzzLYNkoNCr2kAvvByg4gwQKTYc-1755162792876-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[react-is] Extract .fdfb9ff7f3ffe3bf-00000006.react-is[0m (decompressed 5.46 KB tgz file in 0ns)
+[react-is] Extracted to .fdfb9ff7f3ffe3bf-00000006.react-is (15ms)[0m
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m4496
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bf4ba9ee17-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m162273
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"9e08cccb5a9b8401d82588f188288468"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mMon, 30 Sep 2019 20:07:22 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=SHrN9nA1JvAl4GFIlKf0ZHAy.Q62jUnUvYL11JYMkV8-1755162792864-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 24 tasks
+    [0m[2m[[1m1253.37ms[0m[2m][0m[2m Downloaded [0m[32myallist[0m tarball
+[2m[PackageManager][0m waiting for 24 tasks
+[yallist] Extract .fc5bffdee5547d68-00000007.yallist[0m (decompressed 4.50 KB tgz file in 0ns)
+[yallist] Extracted to .fc5bffdee5547d68-00000007.yallist (0ns)[0m
+[2m[PackageManager][0m waiting for 23 tasks
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m4475
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bf6938cefe-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m420177
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"d9121830fdc1ceac8092005cc96855ab"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mTue, 01 Aug 2023 11:57:23 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=pZbmOYgN1OdbRPz_1c4CyInc4se_1pkVB6jalA_FTm4-1755162792904-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 22 tasks
+    [0m[2m[[1m1290.28ms[0m[2m][0m[2m Downloaded [0m[32mhast-util-parse-selector[0m tarball
+[hast-util-parse-selector] Extract .7fdfbf6fb6f67cff-00000008.hast-util-parse-selector[0m (decompressed 4.48 KB tgz file in 0ns)
+[hast-util-parse-selector] Extracted to .7fdfbf6fb6f67cff-00000008.hast-util-parse-selector (16ms)[0m
+[2m[PackageManager][0m waiting for 22 tasks
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m112438
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c07de215f1-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m416608
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"819263eaf8d743373b4d262e3ddb2aaf"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mSun, 08 Jun 2025 19:31:26 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=.3vtFLUgA_TpfMcMqXn3K_ieTleXU.n6b_ZYl4sH8fM-1755162793056-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m3020
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bf8b7c173e-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m760707
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"b002b9e2c81bf9cf66f3c293bf280bfc"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mThu, 04 Nov 2021 06:56:00 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=tJB4Hyl00iGBlq2M3Q2QKh8G5rYuGIuZjiiMjScd4ro-1755162792905-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 21 tasks
+    [0m[2m[[1m1334.74ms[0m[2m][0m[2m Downloaded [0m[32mis-decimal[0m tarball
+[is-decimal] Extract .dedbbf6efbfd7aee-00000009.is-decimal[0m (decompressed 3.0 KB tgz file in 0ns)
+[is-decimal] Extracted to .dedbbf6efbfd7aee-00000009.is-decimal (0ns)[0m
+[2m[PackageManager][0m waiting for 21 tasks
+    [0m[2m[[1m1336.45ms[0m[2m][0m[2m Downloaded [0m[32mentities[0m tarball
+[2m[PackageManager][0m waiting for 21 tasks
+[entities] Extract .3bffd7caff7326fa-0000000A.entities[0m (decompressed 112.44 KB tgz file in 0ns)
+[entities] Extracted to .3bffd7caff7326fa-0000000A.entities (63ms)[0m
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m3097
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c08b5cfad6-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m603791
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"63b4ace5c50a3978c7f6dae4e69227c9"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mThu, 04 Nov 2021 07:17:08 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=44LhJW2KMA5IVJACVWImoCXk217K0cEOrnJtWPLu4i8-1755162793071-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 20 tasks
+    [0m[2m[[1m1399.98ms[0m[2m][0m[2m Downloaded [0m[32mis-hexadecimal[0m tarball
+[2m[PackageManager][0m waiting for 20 tasks
+[is-hexadecimal] Extract .ddfbdfeaad7fbf7f-0000000B.is-hexadecimal[0m (decompressed 3.1 KB tgz file in 0ns)
+[is-hexadecimal] Extracted to .ddfbdfeaad7fbf7f-0000000B.is-hexadecimal (15ms)[0m
+[2m[PackageManager][0m waiting for 19 tasks
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m12725
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c11f35cf2e-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m410739
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"ec45259991dc883ef243244eaaf0f3cf"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mWed, 19 Feb 2025 13:18:02 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=KZISmWiKqci.jAOmYJ6mZHrl.4YVrijVexlXAtrEQmA-1755162793156-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m11503
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55bfe8357e2d-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m604097
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"eb18dbd71327b96eb4f40afb3614cb10"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mWed, 04 Jan 2023 18:21:19 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=gFZSv4t6w6HsdpdLRC2_ZUYmosSlCTHgEzmMK1yHYY0-1755162792975-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:12 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m2755
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55be9dec1975-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m604832
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"dfd8198d4ecd3877cea7e11a0431759b"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mThu, 23 Jan 2020 22:30:54 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=4LJRL601S9wRdI6ZZGDyUfDRpOGzStmIa1NLHHd0yUI-1755162792754-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 18 tasks
+    [0m[2m[[1m1458.93ms[0m[2m][0m[2m Downloaded [0m[32mcomma-separated-tokens[0m tarball
+[comma-separated-tokens] Extract .7c7b977eb1d0dfb5-0000000C.comma-separated-tokens[0m (decompressed 2.76 KB tgz file in 0ns)
+[comma-separated-tokens] Extracted to .7c7b977eb1d0dfb5-0000000C.comma-separated-tokens (0ns)[0m
+[2m[PackageManager][0m waiting for 18 tasks
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m8195
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c02b14faa6-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m761896
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"4380862e3a2be057bd7a7a24d797c48b"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mFri, 13 Dec 2024 11:08:10 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=G2VAC1B7gyL2kwyyQkM4uaJhUDso4Fu8ROTMYAV9EfQ-1755162793011-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 17 tasks
+    [0m[2m[[1m1471.88ms[0m[2m][0m[2m Downloaded [0m[32mparse-entities[0m tarball
+[parse-entities] Extract .3bfbdf5bb97f7ee7-0000000D.parse-entities[0m (decompressed 8.20 KB tgz file in 0ns)
+[parse-entities] Extracted to .3bfbdf5bb97f7ee7-0000000D.parse-entities (0ns)[0m
+[2m[PackageManager][0m waiting for 17 tasks
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m2445
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c0bdc1cf27-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m258079
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"404950759620f804f57ae419f1158d2c"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mThu, 23 Jan 2020 22:42:22 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=_n9VAvyUkyUZhqruFy9QAV3Ft7Jx8Oshf_VCh2x8RyU-1755162793089-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m9704
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c07ecd230a-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m595708
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, must-revalidate, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"b32c7b143d2f6d997a05f6c111a5ba7a"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mMon, 20 Nov 2023 23:44:12 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=Q97Xc0Fpntfckfu3v4oiK0QRfs.0kEjKe3hOObPcfZk-1755162793078-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 16 tasks
+    [0m[2m[[1m1.61s[0m[2m][0m[2m Downloaded [0m[32m@types/babel__core[0m tarball
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m3544
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c09c892386-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m508817
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"b98bf026ae7c625a39ea181b8bdd9667"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mFri, 29 Oct 2021 12:50:21 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=WKEh8EvvFGDa28Pm2WTtEkujKMflIPYrayJv.7qirq0-1755162793086-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m22587
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c0b880eb25-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m257299
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"4cbf55e6cabeeba94905fce42547281d"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mWed, 03 Apr 2024 13:15:32 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=izD5Hh50w_6vUwU7i.67R.h9Q825BesqlbRY9eAijAM-1755162793106-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[@types/babel__core] Extract .7d5bdf7bb7dff66d-0000000E.babel__core[0m (decompressed 9.70 KB tgz file in 0ns)
+[@types/babel__core] Extracted to .7d5bdf7bb7dff66d-0000000E.babel__core (16ms)[0m
+[2m[PackageManager][0m waiting for 16 tasks
+    [0m[2m[[1m1.56s[0m[2m][0m[2m Downloaded [0m[32mproperty-information[0m tarball
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m15047
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c0ac73ebeb-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m335733
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"a9cbda2cfa8168334a3650253fac5501"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mWed, 22 Jun 2022 14:01:08 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=PWPkSIIVW8aH.k0bCsp3xxDbbGlyd9vvEFEbFyAmkVc-1755162793109-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[33mwarn[0m[2m:[0m CreateHardLinkW failed, falling back to CopyFileW: \\?\C:\Users\11\.bun\install\cache\@types\babel__core@7.20.5@@@1\index.d.ts - \\?\D:\GitHub\claudia\node_modules\@types\babel__core\index.d.ts
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m19093
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c0d8b1ed3c-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m325515
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"7eb5cfb3614881f13b55435a3a100073"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mMon, 10 Jul 2023 22:38:43 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=ukpLByoiRZhRNPHA8fPzhcVIAajrszuLiGaXzAT5agA-1755162793111-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m2551
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c0beb4eb21-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m535885
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, must-revalidate, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"799111baf335ff47d5104191c96305b6"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mThu, 15 Aug 2024 02:19:25 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=L8EKp4fTXfhmJvuVBm9RB4QPjOQkCVHJ2uW3PW67B4A-1755162793128-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[property-information] Extract .dcdb9fc7becdf95f-0000000F.property-information[0m (decompressed 22.59 KB tgz file in 0ns)
+[property-information] Extracted to .dcdb9fc7becdf95f-0000000F.property-information (47ms)[0m
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m24289
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c0f9abd049-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m215119
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"fa0a8505a751a04b4cff2285257ddf73"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mSun, 02 Jan 2022 17:18:28 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=CmK8xSELyJQmEVTvgQaOXyL8eaBjEm2_.y6ruK5k4Ec-1755162793143-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:13 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m14001
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c0ef1c7e21-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m158740
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"592230297abae4c4f46d3f360a6503de"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mMon, 08 Jan 2024 03:31:03 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=IU5K2ixtbyY_F_xyvpsYZxT8VEk71uj0Tsn.yhJOXDU-1755162793153-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 16 tasks
+[2m[PackageManager][0m waiting for 15 tasks
+    [0m[2m[[1m1.57s[0m[2m][0m[2m Downloaded [0m[32mcharacter-entities[0m tarball
+    [0m[2m[[1m1.58s[0m[2m][0m[2m Downloaded [0m[32mrefractor[0m tarball
+    [0m[2m[[1m1.58s[0m[2m][0m[2m Downloaded [0m[32m@types/unist[0m tarball
+[@types/unist] Extract .dbfbdf56dcadb7fd-00000010.unist[0m (decompressed 2.55 KB tgz file in 0ns)
+[@types/unist] Extracted to .dbfbdf56dcadb7fd-00000010.unist (16ms)[0m
+[character-entities] Extract .595fffc6c9adffee-00000011.character-entities[0m (decompressed 15.0 KB tgz file in 0ns)
+[character-entities] Extracted to .595fffc6c9adffee-00000011.character-entities (16ms)[0m
+[2m[PackageManager][0m waiting for 14 tasks
+[2m[PackageManager][0m waiting for 13 tasks
+[2m[PackageManager][0m waiting for 12 tasks
+    [0m[2m[[1m1.76s[0m[2m][0m[2m Downloaded [0m[32mprismjs[0m tarball
+[2m[PackageManager][0m waiting for 12 tasks
+    [0m[2m[[1m1.90s[0m[2m][0m[2m Downloaded [0m[32mdetect-libc[0m tarball
+[detect-libc] Extract .fd7b9f7ffb7d5bfe-00000014.detect-libc[0m (decompressed 6.28 KB tgz file in 0ns)
+[detect-libc] Extracted to .fd7b9f7ffb7d5bfe-00000014.detect-libc (0ns)[0m
+[2m[PackageManager][0m waiting for 12 tasks
+[2m[PackageManager][0m waiting for 11 tasks
+[2m[PackageManager][0m waiting for 11 tasks
+    [0m[2m[[1m1.94s[0m[2m][0m[2m Downloaded [0m[32mhastscript[0m tarball
+[hastscript] Extract .5edbb7f3dd5a8fe5-00000015.hastscript[0m (decompressed 11.50 KB tgz file in 0ns)
+[hastscript] Extracted to .5edbb7f3dd5a8fe5-00000015.hastscript (15ms)[0m
+[2m[PackageManager][0m waiting for 11 tasks
+[2m[PackageManager][0m waiting for 10 tasks
+    [0m[2m[[1m2.07s[0m[2m][0m[2m Downloaded [0m[32msemver[0m tarball
+[semver] Extract .1a7bdffbfef16698-00000016.semver[0m (decompressed 19.1 KB tgz file in 0ns)
+[semver] Extracted to .1a7bdffbfef16698-00000016.semver (0ns)[0m
+[2m[PackageManager][0m waiting for 10 tasks
+[2m[PackageManager][0m waiting for 9 tasks
+    [0m[2m[[1m2.11s[0m[2m][0m[2m Downloaded [0m[32mrehype-prism-plus[0m tarball
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/@types/hast/-/hast-2.3.10.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[rehype-prism-plus] Extract .d8dbbf53d739e7fb-00000017.rehype-prism-plus[0m (decompressed 14.0 KB tgz file in 0ns)
+[rehype-prism-plus] Extracted to .d8dbbf53d739e7fb-00000017.rehype-prism-plus (0ns)[0m
+[2m[PackageManager][0m waiting for 9 tasks
+[refractor] Extract .7dfbd7c2c1b1fdfd-00000012.refractor[0m (decompressed 0.32 MB tgz file in 0ns)
+[refractor] Extracted to .7dfbd7c2c1b1fdfd-00000012.refractor (422ms)[0m
+[prismjs] Extract .fbdbb762c3beffd4-00000013.prismjs[0m (decompressed 0.52 MB tgz file in 0ns)
+[prismjs] Extracted to .fbdbb762c3beffd4-00000013.prismjs (531ms)[0m
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:14 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m2436
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55c6be6e15bc-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m770190
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, must-revalidate, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"c4546b4be4977347cf77bbdb61d0c398"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mTue, 30 Jan 2024 22:06:27 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=llSLst_YxJYNyW3xG0OE0WTViFUIPgSwlmw.8o5eR00-1755162794084-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 8 tasks
+[2m[PackageManager][0m waiting for 7 tasks
+    [0m[2m[[1m2.36s[0m[2m][0m[2m Downloaded [0m[32m@types/hast[0m tarball
+    [0m[2m[[1m2.42s[0m[2m][0m[2m Downloaded [0m[32mpicomatch[0m tarball
+[0m[2m[fetch][0m > HTTP/1.1 GET https://registry.npmjs.org/react-markdown/-/react-markdown-9.0.3.tgz
+[0m[2m[fetch][0m > [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m > [0m[36mUser-Agent[0m[2m: [0mBun/1.2.20
+[0m[2m[fetch][0m > [0m[36mAccept[0m[2m: [0m*/*
+[0m[2m[fetch][0m > [0m[36mHost[0m[2m: [0mregistry.npmjs.org
+[0m[2m[fetch][0m > [0m[36mAccept-Encoding[0m[2m: [0mgzip, deflate, br, zstd
+
+[@types/hast] Extract .bf7bdfd7877f45f9-00000018.hast[0m (decompressed 2.44 KB tgz file in 0ns)
+[@types/hast] Extracted to .bf7bdfd7877f45f9-00000018.hast (0ns)[0m
+[2m[PackageManager][0m waiting for 6 tasks
+    [0m[2m[[1m2.93s[0m[2m][0m[2m Downloaded [0m[32mcharacter-entities-legacy[0m tarball
+[character-entities-legacy] Extract .5efff74bfbeddffe-0000001A.character-entities-legacy[0m (decompressed 3.54 KB tgz file in 0ns)
+[character-entities-legacy] Extracted to .5efff74bfbeddffe-0000001A.character-entities-legacy (16ms)[0m
+[picomatch] Extract .fddfb7c36f67dfbd-00000019.picomatch[0m (decompressed 24.29 KB tgz file in 0ns)
+[picomatch] Extracted to .fddfb7c36f67dfbd-00000019.picomatch (16ms)[0m
+[2m[PackageManager][0m waiting for 6 tasks
+[2m[PackageManager][0m waiting for 5 tasks
+[2m[PackageManager][0m waiting for 3 tasks
+    [0m[2m[[1m3.07s[0m[2m][0m[2m Downloaded [0m[32mspace-separated-tokens[0m tarball
+[space-separated-tokens] Extract .dedf9f7b9496dfae-0000001B.space-separated-tokens[0m (decompressed 2.45 KB tgz file in 0ns)
+[space-separated-tokens] Extracted to .dedf9f7b9496dfae-0000001B.space-separated-tokens (0ns)[0m
+[2m[PackageManager][0m waiting for 3 tasks
+[0m[2m[fetch][0m < [0m[32m200[0m OK
+[0m[2m[fetch][0m < [0m[36mDate[0m[2m: [0mThu, 14 Aug 2025 09:13:14 GMT
+[0m[2m[fetch][0m < [0m[36mContent-Type[0m[2m: [0mapplication/octet-stream
+[0m[2m[fetch][0m < [0m[36mContent-Length[0m[2m: [0m14604
+[0m[2m[fetch][0m < [0m[36mConnection[0m[2m: [0mkeep-alive
+[0m[2m[fetch][0m < [0m[36mCF-Ray[0m[2m: [0m96ef55cacdc89459-SJC
+[0m[2m[fetch][0m < [0m[36mCF-Cache-Status[0m[2m: [0mHIT
+[0m[2m[fetch][0m < [0m[36mAccept-Ranges[0m[2m: [0mbytes
+[0m[2m[fetch][0m < [0m[36mAccess-Control-Allow-Origin[0m[2m: [0m*
+[0m[2m[fetch][0m < [0m[36mAge[0m[2m: [0m424514
+[0m[2m[fetch][0m < [0m[36mCache-Control[0m[2m: [0mpublic, immutable, max-age=31557600
+[0m[2m[fetch][0m < [0m[36mETag[0m[2m: [0m"a3bd8adc2e5de2ef77f1fa7e2f959176"
+[0m[2m[fetch][0m < [0m[36mLast-Modified[0m[2m: [0mMon, 06 Jan 2025 11:15:35 GMT
+[0m[2m[fetch][0m < [0m[36mVary[0m[2m: [0mAccept-Encoding
+[0m[2m[fetch][0m < [0m[36mSet-Cookie[0m[2m: [0m_cfuvid=z4qBdFBEETwPZJW95glCQHhqkL7U4aX55_M3zpfuovY-1755162794714-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None
+[0m[2m[fetch][0m < [0m[36mServer[0m[2m: [0mcloudflare
+
+[2m[PackageManager][0m waiting for 2 tasks
+    [0m[2m[[1m3.31s[0m[2m][0m[2m Downloaded [0m[32mhastscript[0m tarball
+[hastscript] Extract .99dbdf4b7f3df8ff-0000001C.hastscript[0m (decompressed 12.73 KB tgz file in 0ns)
+[hastscript] Extracted to .99dbdf4b7f3df8ff-0000001C.hastscript (16ms)[0m
+[2m[PackageManager][0m waiting for 2 tasks
+[2m[PackageManager][0m waiting for 1 tasks
+[2m[PackageManager][0m waiting for 1 tasks
+[2m[PackageManager][0m waiting for 1 tasks
+    [0m[2m[[1m5.06s[0m[2m][0m[2m Downloaded [0m[32mreact-markdown[0m tarball
+[react-markdown] Extract .99ffdf53cf61efa4-0000001D.react-markdown[0m (decompressed 14.60 KB tgz file in 0ns)
+[react-markdown] Extracted to .99ffdf53cf61efa4-0000001D.react-markdown (15ms)[0m
+[2m[PackageManager][0m waiting for 1 tasks

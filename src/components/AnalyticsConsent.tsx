@@ -29,12 +29,24 @@ export const AnalyticsConsent: React.FC<AnalyticsConsentProps> = ({
     const checkConsent = async () => {
       await analytics.initialize();
       const settings = analytics.getSettings();
-      
-      if (!settings?.hasConsented && !hasShownConsent) {
+
+      // Debug logging to help troubleshoot
+      console.log('AnalyticsConsent: Checking consent state');
+      console.log('Settings:', settings);
+      console.log('hasSeenBanner:', settings?.hasSeenBanner);
+      console.log('hasShownConsent:', hasShownConsent);
+      console.log('isControlled:', isControlled);
+
+      // Only show consent dialog if user hasn't seen the banner before
+      // This prevents showing it again after user declines
+      if (!settings?.hasSeenBanner && !hasShownConsent) {
+        console.log('AnalyticsConsent: Showing banner');
         if (!isControlled) {
           setInternalOpen(true);
         }
         setHasShownConsent(true);
+      } else {
+        console.log('AnalyticsConsent: Not showing banner - already seen or shown in session');
       }
     };
     

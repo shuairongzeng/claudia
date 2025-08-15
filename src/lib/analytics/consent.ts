@@ -26,6 +26,7 @@ export class ConsentManager {
         this.settings = {
           enabled: false,
           hasConsented: false,
+          hasSeenBanner: false,
         };
       }
       
@@ -40,9 +41,23 @@ export class ConsentManager {
         this.settings.sessionId = this.generateSessionId();
       }
       
+      // Ensure hasSeenBanner field exists for backward compatibility
+      if (this.settings && this.settings.hasSeenBanner === undefined) {
+        // If user has already made a consent decision, mark banner as seen
+        // We can detect this by checking if they have consented OR if they have a userId
+        // (which indicates they've interacted with the app before)
+        const hasInteractedBefore = this.settings.hasConsented ||
+                                   this.settings.consentDate ||
+                                   this.settings.userId;
+
+        this.settings.hasSeenBanner = !!hasInteractedBefore;
+        await this.saveSettings();
+      }
+
       return this.settings || {
         enabled: false,
         hasConsented: false,
+        hasSeenBanner: false,
       };
     } catch (error) {
       console.error('Failed to initialize consent manager:', error);
@@ -50,6 +65,7 @@ export class ConsentManager {
       return {
         enabled: false,
         hasConsented: false,
+        hasSeenBanner: false,
       };
     }
   }
@@ -58,11 +74,12 @@ export class ConsentManager {
     if (!this.settings) {
       await this.initialize();
     }
-    
+
     this.settings!.enabled = true;
     this.settings!.hasConsented = true;
+    this.settings!.hasSeenBanner = true;
     this.settings!.consentDate = new Date().toISOString();
-    
+
     await this.saveSettings();
   }
   
@@ -70,9 +87,11 @@ export class ConsentManager {
     if (!this.settings) {
       await this.initialize();
     }
-    
+
     this.settings!.enabled = false;
-    
+    this.settings!.hasSeenBanner = true; // Mark banner as seen even when declining
+    this.settings!.consentDate = new Date().toISOString(); // Record when user declined
+
     await this.saveSettings();
   }
   
@@ -84,6 +103,7 @@ export class ConsentManager {
     this.settings = {
       enabled: false,
       hasConsented: false,
+      hasSeenBanner: false, // Reset banner state when deleting all data
       userId: this.generateAnonymousId(),
       sessionId: this.generateSessionId(),
     };
@@ -94,11 +114,25 @@ export class ConsentManager {
   getSettings(): AnalyticsSettings | null {
     return this.settings;
   }
+
+  // Debug method to help troubleshoot banner issues
+  debugBannerState(): void {
+    console.log('=== Analytics Banner Debug ===');
+    console.log('Settings:', this.settings);
+    console.log('hasSeenBanner:', this.hasSeenBanner());
+    console.log('hasConsented:', this.hasConsented());
+    console.log('isEnabled:', this.isEnabled());
+    console.log('==============================');
+  }
   
   hasConsented(): boolean {
     return this.settings?.hasConsented || false;
   }
-  
+
+  hasSeenBanner(): boolean {
+    return this.settings?.hasSeenBanner || false;
+  }
+
   isEnabled(): boolean {
     return this.settings?.enabled || false;
   }

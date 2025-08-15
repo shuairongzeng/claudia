@@ -60,7 +60,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { detectLinks, makeLinksClickable } from "@/lib/linkDetector";
 import ReactMarkdown from "react-markdown";
 import { open } from "@tauri-apps/plugin-shell";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { StickyTabs, StickyTabsContent, StickyTabsList, TabsTrigger } from "@/components/ui/sticky-tabs";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -2942,8 +2942,8 @@ export const TodoReadWidget: React.FC<{ todos?: any[]; result?: any }> = ({ todo
       </div>
 
       {/* View Mode Tabs */}
-      <Tabs value={viewMode} onValueChange={(v) => setViewMode(v as typeof viewMode)}>
-        <TabsList className="grid w-full grid-cols-4">
+      <StickyTabs value={viewMode} onValueChange={(v) => setViewMode(v as typeof viewMode)}>
+        <StickyTabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="list" className="text-xs">
             <LayoutList className="h-4 w-4 mr-1" />
             List
@@ -2960,9 +2960,9 @@ export const TodoReadWidget: React.FC<{ todos?: any[]; result?: any }> = ({ todo
             <BarChart3 className="h-4 w-4 mr-1" />
             Stats
           </TabsTrigger>
-        </TabsList>
+        </StickyTabsList>
 
-        <TabsContent value="list" className="mt-4">
+        <StickyTabsContent value="list" className="mt-4">
           <div className="space-y-2">
             <AnimatePresence mode="popLayout">
               {filteredTodos.map(todo => (
@@ -2981,20 +2981,20 @@ export const TodoReadWidget: React.FC<{ todos?: any[]; result?: any }> = ({ todo
               </div>
             )}
           </div>
-        </TabsContent>
+        </StickyTabsContent>
 
-        <TabsContent value="board" className="mt-4">
+        <StickyTabsContent value="board" className="mt-4">
           <BoardView />
-        </TabsContent>
+        </StickyTabsContent>
 
-        <TabsContent value="timeline" className="mt-4">
+        <StickyTabsContent value="timeline" className="mt-4">
           <TimelineView />
-        </TabsContent>
+        </StickyTabsContent>
 
-        <TabsContent value="stats" className="mt-4">
+        <StickyTabsContent value="stats" className="mt-4">
           <StatsView />
-        </TabsContent>
-      </Tabs>
+        </StickyTabsContent>
+      </StickyTabs>
     </div>
   );
 };

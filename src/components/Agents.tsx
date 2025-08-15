@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { StickyTabs, StickyTabsList, StickyTabsContent, TabsTrigger } from '@/components/ui/sticky-tabs';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
@@ -302,9 +302,9 @@ export const Agents: React.FC = () => {
       </AnimatePresence>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-6">
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid grid-cols-2 w-full max-w-md mb-6 h-auto p-1">
+        <div className="flex-1 flex flex-col">
+          <StickyTabs value={activeTab} onValueChange={setActiveTab} className="w-full h-full">
+            <StickyTabsList className="grid grid-cols-2 w-full max-w-md mx-6 mt-6 mb-0 h-auto p-1">
               <TabsTrigger value="agents" className="py-2.5 px-3">
                 <Bot className="w-4 h-4 mr-2" />
                 Agents ({agents.length})
@@ -313,9 +313,9 @@ export const Agents: React.FC = () => {
                 <History className="w-4 h-4 mr-2" />
                 History ({runningAgents.length})
               </TabsTrigger>
-            </TabsList>
+            </StickyTabsList>
 
-          <TabsContent value="agents" className="flex-1 overflow-hidden">
+          <StickyTabsContent value="agents" className="flex-1 overflow-hidden">
               {loading ? (
                 <div className="flex items-center justify-center h-64">
                   <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
@@ -393,9 +393,9 @@ export const Agents: React.FC = () => {
                   ))}
                 </div>
               )}
-            </TabsContent>
+            </StickyTabsContent>
 
-            <TabsContent value="running" className="space-y-6 mt-6">
+            <StickyTabsContent value="running" className="space-y-6">
               {runningAgents.length === 0 ? (
                 <Card className="p-12">
                   <div className="flex flex-col items-center justify-center text-center">
@@ -455,8 +455,8 @@ export const Agents: React.FC = () => {
                   ))}
                 </div>
               )}
-            </TabsContent>
-          </Tabs>
+            </StickyTabsContent>
+          </StickyTabs>
         </div>
       </div>
     </div>

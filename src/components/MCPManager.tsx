@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AlertCircle, Loader2 } from "lucide-react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { StickyTabs, StickyTabsList, StickyTabsContent, TabsTrigger } from "@/components/ui/sticky-tabs";
 import { Card } from "@/components/ui/card";
 import { Toast, ToastContainer } from "@/components/ui/toast";
 import { api, type MCPServer } from "@/lib/api";
@@ -130,9 +130,9 @@ export const MCPManager: React.FC<MCPManagerProps> = ({
             <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
           </div>
         ) : (
-          <div className="flex-1 overflow-y-auto p-6">
-            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="grid grid-cols-3 w-full max-w-md mb-6 h-auto p-1">
+          <div className="flex-1 flex flex-col">
+            <StickyTabs value={activeTab} onValueChange={setActiveTab} className="h-full">
+              <StickyTabsList className="grid grid-cols-3 w-full max-w-md mx-6 mt-6 mb-0 h-auto p-1">
                 <TabsTrigger value="servers" className="py-2.5 px-3">
                   Servers
                 </TabsTrigger>
@@ -142,10 +142,10 @@ export const MCPManager: React.FC<MCPManagerProps> = ({
                 <TabsTrigger value="import" className="py-2.5 px-3">
                   Import/Export
                 </TabsTrigger>
-              </TabsList>
+              </StickyTabsList>
 
               {/* Servers Tab */}
-              <TabsContent value="servers" className="space-y-6 mt-6">
+              <StickyTabsContent value="servers" className="space-y-6">
                 <Card>
                   <MCPServerList
                     servers={servers}
@@ -154,28 +154,28 @@ export const MCPManager: React.FC<MCPManagerProps> = ({
                     onRefresh={loadServers}
                   />
                 </Card>
-              </TabsContent>
+              </StickyTabsContent>
 
               {/* Add Server Tab */}
-              <TabsContent value="add" className="space-y-6 mt-6">
+              <StickyTabsContent value="add" className="space-y-6">
                 <Card>
                   <MCPAddServer
                     onServerAdded={handleServerAdded}
                     onError={(message: string) => setToast({ message, type: "error" })}
                   />
                 </Card>
-              </TabsContent>
+              </StickyTabsContent>
 
               {/* Import/Export Tab */}
-              <TabsContent value="import" className="space-y-6 mt-6">
+              <StickyTabsContent value="import" className="space-y-6">
                 <Card className="overflow-hidden">
                   <MCPImportExport
                     onImportCompleted={handleImportCompleted}
                     onError={(message: string) => setToast({ message, type: "error" })}
                   />
                 </Card>
-              </TabsContent>
-            </Tabs>
+              </StickyTabsContent>
+            </StickyTabs>
           </div>
         )}
       </div>

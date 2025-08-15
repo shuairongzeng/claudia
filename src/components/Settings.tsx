@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Card } from "@/components/ui/card";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { StickyTabs, StickyTabsList, StickyTabsContent, TabsTrigger } from "@/components/ui/sticky-tabs";
 import { 
   api, 
   type ClaudeSettings,
@@ -395,9 +395,9 @@ export const Settings: React.FC<SettingsProps> = ({
           <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
         </div>
       ) : (
-        <div className="flex-1 overflow-y-auto p-6">
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid grid-cols-8 w-full mb-6 h-auto p-1">
+        <div className="flex-1 flex flex-col">
+          <StickyTabs value={activeTab} onValueChange={setActiveTab} className="w-full h-full">
+            <StickyTabsList className="grid grid-cols-8 w-full mx-6 mt-6 mb-0 h-auto p-1">
               <TabsTrigger value="general" className="py-2.5 px-3">General</TabsTrigger>
               <TabsTrigger value="permissions" className="py-2.5 px-3">Permissions</TabsTrigger>
               <TabsTrigger value="environment" className="py-2.5 px-3">Environment</TabsTrigger>
@@ -406,10 +406,10 @@ export const Settings: React.FC<SettingsProps> = ({
               <TabsTrigger value="commands" className="py-2.5 px-3">Commands</TabsTrigger>
               <TabsTrigger value="storage" className="py-2.5 px-3">Storage</TabsTrigger>
               <TabsTrigger value="proxy" className="py-2.5 px-3">Proxy</TabsTrigger>
-            </TabsList>
+            </StickyTabsList>
             
             {/* General Settings */}
-            <TabsContent value="general" className="space-y-6 mt-6">
+            <StickyTabsContent value="general" className="space-y-6">
               <Card className="p-6 space-y-6">
                 <div>
                   <h3 className="text-heading-4 mb-4">General Settings</h3>
@@ -776,10 +776,10 @@ export const Settings: React.FC<SettingsProps> = ({
                   </div>
                 </div>
               </Card>
-            </TabsContent>
-            
+            </StickyTabsContent>
+
             {/* Permissions Settings */}
-            <TabsContent value="permissions" className="space-y-6">
+            <StickyTabsContent value="permissions" className="space-y-6">
               <Card className="p-6">
                 <div className="space-y-6">
                   <div>
@@ -899,10 +899,10 @@ export const Settings: React.FC<SettingsProps> = ({
                   </div>
                 </div>
               </Card>
-            </TabsContent>
-            
+            </StickyTabsContent>
+
             {/* Environment Variables */}
-            <TabsContent value="environment" className="space-y-6">
+            <StickyTabsContent value="environment" className="space-y-6">
               <Card className="p-6">
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
@@ -974,9 +974,9 @@ export const Settings: React.FC<SettingsProps> = ({
                   </div>
                 </div>
               </Card>
-            </TabsContent>
+            </StickyTabsContent>
             {/* Advanced Settings */}
-            <TabsContent value="advanced" className="space-y-6">
+            <StickyTabsContent value="advanced" className="space-y-6">
               <Card className="p-6">
                 <div className="space-y-6">
                   <div>
@@ -1012,10 +1012,10 @@ export const Settings: React.FC<SettingsProps> = ({
                   </div>
                 </div>
               </Card>
-            </TabsContent>
-            
+            </StickyTabsContent>
+
             {/* Hooks Settings */}
-            <TabsContent value="hooks" className="space-y-6">
+            <StickyTabsContent value="hooks" className="space-y-6">
               <Card className="p-6">
                 <div className="space-y-4">
                   <div>
@@ -1038,22 +1038,22 @@ export const Settings: React.FC<SettingsProps> = ({
                   />
                 </div>
               </Card>
-            </TabsContent>
-            
+            </StickyTabsContent>
+
             {/* Commands Tab */}
-            <TabsContent value="commands">
+            <StickyTabsContent value="commands">
               <Card className="p-6">
                 <SlashCommandsManager className="p-0" />
               </Card>
-            </TabsContent>
-            
+            </StickyTabsContent>
+
             {/* Storage Tab */}
-            <TabsContent value="storage">
+            <StickyTabsContent value="storage">
               <StorageTab />
-            </TabsContent>
+            </StickyTabsContent>
             
             {/* Proxy Settings */}
-            <TabsContent value="proxy">
+            <StickyTabsContent value="proxy">
               <Card className="p-6">
                 <ProxySettings 
                   setToast={setToast}
@@ -1063,9 +1063,9 @@ export const Settings: React.FC<SettingsProps> = ({
                   }}
                 />
               </Card>
-            </TabsContent>
+            </StickyTabsContent>
             
-          </Tabs>
+          </StickyTabs>
         </div>
       )}
       </div>
